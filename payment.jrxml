@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="payment" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="817e8b16-d881-4d70-8dfe-55c2262607df">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="House No" class="java.lang.String"/>
+	<field name="Rent" class="java.lang.String"/>
+	<field name="Tenant" class="java.lang.String"/>
+	<field name="Arrears" class="java.lang.String"/>
+	<field name="Expected Amount" class="java.lang.String"/>
+	<field name="Amount Paid" class="java.lang.String"/>
+	<field name="Balance" class="java.lang.String"/>
+	<field name="Year" class="java.lang.String"/>
+	<field name="Month" class="java.lang.String"/>
+	<field name="Name" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="183" y="0" width="231" height="34" uuid="a1917672-19d0-4296-975c-13c66fec7fe3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="24"/>
+				</textElement>
+				<text><![CDATA[PAYMENTS REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="17" splitType="Stretch">
+			<line>
+				<reportElement x="18" y="4" width="521" height="1" uuid="f6c1fee4-da77-4f28-b703-aee107698bff"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="20" forecolor="#3300FF" uuid="9fc6b6c8-ac93-4f67-b218-fd19c7643ab7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[House No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="51" y="0" width="51" height="20" forecolor="#3300FF" uuid="311664d7-efaf-419f-be40-02d5bd177bf1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Rent]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="0" width="61" height="20" forecolor="#3300FF" uuid="eb626683-2c68-45c2-865c-a2a5d2ac3674"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Tenant]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="0" width="61" height="20" forecolor="#3300FF" uuid="5adf682d-f64c-40f4-b673-72957683e5b1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Arrears]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="0" width="61" height="20" forecolor="#3300FF" uuid="c252e041-007d-46bc-84e8-6a636303b9d2"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Expected Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="0" width="61" height="20" forecolor="#3300FF" uuid="5113c5c0-c665-40a9-a5f3-ff685aed12fa"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Amount Paid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="0" width="61" height="20" forecolor="#3300FF" uuid="973ac93e-881e-45ee-85e7-ad17ee8c2f4b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="0" width="36" height="20" forecolor="#3300FF" uuid="f3d3e0d0-d798-4c00-b3a3-0fe8c4d0b8a0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="0" width="37" height="20" forecolor="#3300FF" uuid="55789de0-b1a6-43b1-8b1e-7535004cba65"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Month]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="2" width="70" height="20" forecolor="#3300FF" uuid="213ccd8d-231e-4286-8e62-a4cead6af03a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20" uuid="72281d4f-ad43-4d01-82ca-163805c9b390"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{House No}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="51" y="0" width="51" height="20" uuid="7f65d8a5-f3a4-49e3-84d0-d33c672fbf30"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Rent}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="0" width="61" height="20" uuid="29f623f0-8695-4d6a-b080-1b2140fbfee5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Tenant}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="163" y="0" width="61" height="20" uuid="9a7a6593-a3cd-4a28-86d1-fb598590cf93"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Arrears}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="0" width="61" height="20" uuid="5313ab8b-5168-4464-9389-3b0bfba2a6d8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Expected Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="285" y="0" width="61" height="20" uuid="358219ea-47cf-4a4c-a694-169cc07545c6"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Amount Paid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="346" y="0" width="61" height="20" uuid="5d9d97b2-6e64-46f7-b9bb-2fc2622a4749"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Balance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="0" width="36" height="20" uuid="149e8a8d-8236-437a-8958-d6c46f0ac420"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Year}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="0" width="37" height="20" uuid="15b9a1a0-79ec-40c0-b7d4-8bc6bd8b4c42"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Month}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="1" width="70" height="20" uuid="c1d5d2ca-22a7-4032-9753-f0884816b69b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="23" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="6" y="16" width="220" height="20" uuid="9d455480-4234-4aec-afd3-10602bf440fa"/>
+				<textElement>
+					<font fontName="Lucida Calligraphy" size="14"/>
+				</textElement>
+				<text><![CDATA[ACO HOLDINGS LIMITED]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

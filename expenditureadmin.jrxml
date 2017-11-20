@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="expenditureadmin" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e0b38c01-8eb2-4861-a6ab-f2db3856804f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="Description" class="java.lang.String"/>
+	<field name="Expenditure amount" class="java.lang.String"/>
+	<field name="Year" class="java.lang.String"/>
+	<field name="Month" class="java.lang.String"/>
+	<field name="Date" class="java.lang.String"/>
+	<field name="Grand Total Expenditure" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="139" y="0" width="271" height="35" uuid="9d1e260f-d1cd-4bc9-a2e4-cbd3c0ea00db"/>
+				<textElement>
+					<font fontName="Times New Roman" size="24"/>
+				</textElement>
+				<text><![CDATA[EXPENDITURE REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="30" splitType="Stretch">
+			<line>
+				<reportElement x="13" y="6" width="525" height="1" uuid="fb1a0c94-3172-4880-a085-e8d42dfcd5f5"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="105" height="20" forecolor="#0000CC" uuid="1c27fb3f-5668-49c8-a1dc-46f7de93b685"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="0" width="104" height="20" forecolor="#0000CC" uuid="9c406148-272d-46ee-af15-61d29f16a6cc"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Expenditure amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="0" width="62" height="20" forecolor="#0000CC" uuid="6345eff2-05ff-481b-a16c-16d0ad807206"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="299" y="0" width="56" height="20" forecolor="#0000CC" uuid="52656f6a-cc39-4102-bd1d-9232eb2fa680"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Month]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="0" width="79" height="20" forecolor="#0000CC" uuid="376a041d-0c01-4874-accc-39d0d48fb980"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="92" height="20" forecolor="#0000CC" uuid="64ef7eae-41dd-4ec5-ac93-3c54fef0cbf1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Grand Total Expenditure]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="105" height="20" uuid="23f6f508-3aa5-4c47-943b-7a642d27fa1b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="115" y="0" width="104" height="20" uuid="2cf1bb69-3bfd-45c1-88fc-d998912c4052"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Expenditure amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="0" width="62" height="20" uuid="d9ee7702-1eaa-4c33-9674-36889fed6095"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Year}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="299" y="0" width="56" height="20" uuid="f1ef7868-890d-44cf-9263-61a796a1a31c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Month}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="0" width="79" height="20" uuid="0161991b-bcff-4377-80aa-9ffd16eee1b2"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="0" width="92" height="20" uuid="b6d56256-7dd4-4667-8981-02d65bc39482"/>
+				<textElement>
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Grand Total Expenditure}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="34" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="25" width="219" height="20" uuid="6177bb6c-dc30-4aa7-81da-ba6da673ae15"/>
+				<textElement>
+					<font fontName="Lucida Calligraphy" size="14"/>
+				</textElement>
+				<text><![CDATA[ACO HOLDINGS LIMITED]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
